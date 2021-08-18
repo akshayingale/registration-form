@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registration Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+  function myFunction(){
+  let fname=document.getElementById("fname1").value;
+  document.getElementById("fname2").value=fname;
+  
+  
+  let mname=document.getElementById("mname1").value;
+  document.getElementById("mname2").value=mname;
+  
+  let lname=document.getElementById("lname1").value;
+  document.getElementById("lname2").value=lname;
+  
+  
+  
+  let email=document.getElementById("email1").value;
+  document.getElementById("email2").value=email;
+  
+  
+  let r1=document.getElementById("radio1").value;
+  document.getElementById("radio3").value=r1;
+  
+  let r2=document.getElementById("radio2").value;
+  document.getElementById("radio4").value=r2;
+  
+  let D=document.getElementById("dob1").value;
+  document.getElementById("dob2").value=D;
+  
+  let H=document.getElementById("sl1").value;
+  document.getElementById("sl2").value=H;
+  
+  
+  }
+  </script>
+  
+  </head>
+  
+<body>
+
+  
+  
+<div class="row">
+ <div class="col-md-6" style="background-color:lightGreen;">
+<div class="container">
+  <h2>First form</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="fname">First name</label>
+      <input type="text" class="form-control" id="fname1" placeholder="Enter first name" >
+    </div>
+    <div class="form-group">
+      <label for="pwd">Middel name</label>
+      <input type="text" class="form-control" id="mname1" placeholder="Enter Middel name" >
+    </div>
+    <div class="form-group">
+      <label for="pwd">Last name</label>
+      <input type="text" class="form-control" id="lname1" placeholder="Enter Last name" >
+    </div>
+   <div>
+   <label>Enter your Email</lable><br>
+   <input type="email" id="email1" placeholder="Enter your Emale">
+   </div>
+    
+      <div class="form-check-inline">
+      <label class="form-check-label" for="radio2">
+        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option2">Male
+      </label><br>
+       <label class="form-check-label" for="radio2">
+        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Female
+      </label>
+    </div>
+    <br>
+    <lable>Enter your DOB</lable><br>
+    <input type="date" id="dob1"><br><br>
+    
+   <div >
+   <lable><strong>Select your hobbies</strong></lable>
+  <select id="sl1" style="color:blue">
+  
+  <option>Traveling</option>
+  <option>Dancing</option>
+  <option>Painting</option>
+  <option>Cricket</option>
+  </select>
+  </div>
+  
+  
+    <br><br>
+    <a onclick="myFunction()" type="submit" class="btn btn-primary">Submit</a>
+  </form>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="col-md-6" style="background-color:lightGreen;">
+<div class="container">
+  <h2>Second form</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="fname">First name</label>
+      <input type="text" class="form-control" id="fname2" placeholder="Enter first name" >
+    </div>
+    <div class="form-group">
+      <label for="pwd">Middel name</label>
+      <input type="text" class="form-control" id="mname2" placeholder="Enter Middel name" >
+    </div>
+    <div class="form-group">
+      <label for="pwd">Last name</label>
+      <input type="text" class="form-control" id="lname2" placeholder="Enter Last name" >
+    </div>
+   <div>
+   <label>Enter your Email</lable><br>
+   <input type="email" id="email2" placeholder="Enter your Emale">
+   </div>
+    
+      <div class="form-check-inline">
+      <label class="form-check-label" for="radio2">
+        <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option2">Male
+      </label><br>
+       <label class="form-check-label" for="radio2">
+        <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option2">Female
+      </label>
+    </div>
+    <br>
+    <lable>Enter your DOB</lable><br>
+    <input type="date" id="dob2"><br><br>
+    
+  <div >
+  <label><strong>Select your hobbies</strong></label>
+  <select id="sl2" style="color:blue">
+  
+  <option>Traveling</option>
+  <option>Dancing</option>
+  <option>Painting</option>
+  <option>Cricket</option>
+  </select>
+  </div>
+  
+  
+    <br><br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>
+</div>
+</body>
+</html>
