@@ -10,7 +10,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <script>
-  function myFunction(){
+  function myFunction()
+  {
   let fname=document.getElementById("fname1").value;
   document.getElementById("fname2").value=fname;
   
@@ -27,18 +28,57 @@
   document.getElementById("email2").value=email;
   
   
-  let r1=document.getElementById("radio1").value;
-  document.getElementById("radio3").value=r1;
+  let H=document.getElementById("sl1").value;
+  document.getElementById("sl2").value=H;
   
-  let r2=document.getElementById("radio2").value;
-  document.getElementById("radio4").value=r2;
+  
+  
   
   let D=document.getElementById("dob1").value;
   document.getElementById("dob2").value=D;
   
-  let H=document.getElementById("sl1").value;
-  document.getElementById("sl2").value=H;
+ 
+   const rbs = document.querySelectorAll('input[name="gender"]');
+            let selectedValue;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    selectedValue = rb.value;
+                    if(selectedValue == "male")
+                    {
+                    document.getElementById("male2").setAttribute('checked',true);
+                    }
+                    
+                    
+                     if(selectedValue == "female")
+                    {
+                    document.getElementById("female2").setAttribute('checked',true);
+                    }
+                    break;
+                   }
+                   }
   
+  
+  const cb=document.querySelector('#pnt');
+  
+  if(cb.checked){
+  
+  document.getElementById("pnt1").setAttribute('checked',true)
+  }
+  
+  
+  const cb1=document.querySelector('#crk');
+  
+  if(cb1.checked){
+  
+  document.getElementById("crk1").setAttribute('checked',true)
+  }
+  
+  const cb2=document.querySelector('#dnc');
+  
+  if(cb2.checked){
+  
+  document.getElementById("dnc1").setAttribute('checked',true)
+  }
   
   }
   </script>
@@ -49,7 +89,7 @@
 
   
   
-<div class="row">
+<div class="row"> 
  <div class="col-md-6" style="background-color:lightGreen;">
 <div class="container">
   <h2>First form</h2>
@@ -73,10 +113,10 @@
     
       <div class="form-check-inline">
       <label class="form-check-label" for="radio2">
-        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option2">Male
+        <input type="radio" class="form-check-input" id="male1" name="gender" value="male">Male
       </label><br>
        <label class="form-check-label" for="radio2">
-        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Female
+        <input type="radio" class="form-check-input" id="female1" name="gender" value="female">Female
       </label>
     </div>
     <br>
@@ -84,19 +124,39 @@
     <input type="date" id="dob1"><br><br>
     
    <div >
-   <lable><strong>Select your hobbies</strong></lable>
+   <label><strong>Select Qualification</strong></label>
   <select id="sl1" style="color:blue">
   
-  <option>Traveling</option>
-  <option>Dancing</option>
-  <option>Painting</option>
-  <option>Cricket</option>
+  <option>BE/Btech</option>
+  <option>MCA</option>
+  <option>MBA</option>
+  <option>Mtech</option>
   </select>
   </div>
+  <br>
   
+  
+  <label><strong>Hobbies</strong></lable>
+   <div>
+      <label>
+        <input type="checkbox" id="pnt" name="pnt" >Painting
+      </label>
+    </div>
+    
+    <div>
+      <label >
+        <input type="checkbox" id="crk" name="crk" >Cricket
+      </label>
+    </div>
+    
+    <div >
+      <label >
+        <input type="checkbox" id="dnc" name="dnc" >Dancing
+      </label>
+    </div>
   
     <br><br>
-    <a onclick="myFunction()" type="submit" class="btn btn-primary">Submit</a>
+    <a onclick="myFunction()" class="btn btn-primary">Submit</a>
   </form>
 </div>
 </div>
@@ -110,7 +170,7 @@
 <div class="col-md-6" style="background-color:lightGreen;">
 <div class="container">
   <h2>Second form</h2>
-  <form action="/action_page.php">
+  <form>
     <div class="form-group">
       <label for="fname">First name</label>
       <input type="text" class="form-control" id="fname2" placeholder="Enter first name" >
@@ -130,10 +190,10 @@
     
       <div class="form-check-inline">
       <label class="form-check-label" for="radio2">
-        <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option2">Male
+        <input type="radio" class="form-check-input" id="male2" name="gender1" value="male1">Male
       </label><br>
        <label class="form-check-label" for="radio2">
-        <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option2">Female
+        <input type="radio" class="form-check-input" id="female2" name="gender1" value="female1">Female
       </label>
     </div>
     <br>
@@ -141,20 +201,46 @@
     <input type="date" id="dob2"><br><br>
     
   <div >
-  <label><strong>Select your hobbies</strong></label>
+  <label><strong>Select Qualification</strong></label>
   <select id="sl2" style="color:blue">
   
-  <option>Traveling</option>
-  <option>Dancing</option>
-  <option>Painting</option>
-  <option>Cricket</option>
+  <option>BE/Btech</option>
+  <option>MCA</option>
+  <option>MBA</option>
+  <option>Mtech</option>
   </select>
   </div>
   
+  <br>
+  
+  
+  
+  <label><strong>Hobbies</strong></lable><br>
+  
+   <div >
+   
+   
+      <label  >
+        <input type="checkbox" id="pnt1" name="pnt1" >Painting
+      </label>
+    </div>
+    
+     <div >
+      <label >
+        <input type="checkbox"  id="crk1" name="crk1" >Cricket
+      </label>
+    </div>
+    
+    <div >
+      <label >
+        <input type="checkbox"  id="dnc1" name="dnc1" >Dancing
+      </label>
+    </div>
   
     <br><br>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    
   </form>
+  <a class="btn btn-primary">Submit</a>
 </div>
 </div>
 </div>
